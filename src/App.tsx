@@ -198,10 +198,7 @@ const HomePage = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-            Sehaj is the official WhatsApp helpdesk for the citizens of
-            Jharsuguda district, providing verified information, grievance
-            support, and assistance from the Collectorate Jharsuguda
-            administration.
+           Sehaj is a digital citizen helpdesk platform developed by PugArch Technology Pvt Ltd for the District Administration of Jharsuguda.
           </p>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
             
