@@ -309,7 +309,7 @@ const HomePage = () => {
                   </a>
                 </p>
                 <br></br>
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Official Whatsapp Chatbot Number</span>
+                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Official WhatsApp Helpdesk Number</span>
                 <p className="text-white font-medium">8999470824</p>
               </div>
             </div>
