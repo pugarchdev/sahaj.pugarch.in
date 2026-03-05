@@ -283,7 +283,9 @@ const HomePage = () => {
               governance for the citizens of Jharsuguda.
             </p>
             <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-            Sahaj is the official WhatsApp chatbot service of Collectorate Jharsuguda implemented for citizen assistance and public information.
+          Sahaj is a citizen helpdesk chatbot platform developed by
+PugArch Technology Pvt Ltd to assist organizations and
+public service providers in communicating with citizens.
             </p> 
              <p className="text-lg text-gray-400 mb-10 leading-relaxed">
 This platform is currently deployed to assist citizens
