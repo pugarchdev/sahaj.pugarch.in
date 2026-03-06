@@ -34,36 +34,48 @@ const Navbar = () => {
               Sahaj
             </span>
             <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">
-              Collectorate Jharsuguda
+              Citizen Helpdesk Platform
             </span>
           </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           <Link
             to="/"
-            className={`text-sm font-semibold transition-colors ${pathname === "/" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
+            className={`text-xs font-semibold uppercase tracking-wider transition-colors ${pathname === "/" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
           >
             Home
           </Link>
           <Link
-            to="/privacy"
-            className={`text-sm font-semibold transition-colors ${pathname === "/privacy" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
+            to="/about"
+            className={`text-xs font-semibold uppercase tracking-wider transition-colors ${pathname === "/about" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
           >
-            Privacy Policy
+            About
           </Link>
           <Link
-            to="/terms"
-            className={`text-sm font-semibold transition-colors ${pathname === "/terms" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
+            to="/partners"
+            className={`text-xs font-semibold uppercase tracking-wider transition-colors ${pathname === "/partners" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
           >
-            Terms of Service
+            Partners
+          </Link>
+          <Link
+            to="/whatsapp-services"
+            className={`text-xs font-semibold uppercase tracking-wider transition-colors ${pathname === "/whatsapp-services" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
+          >
+            WhatsApp
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-xs font-semibold uppercase tracking-wider transition-colors ${pathname === "/contact" ? "text-violet-400" : "text-gray-400 hover:text-white"}`}
+          >
+            Contact
           </Link>
           <a
             href="https://wa.me/918999470824"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white text-sm font-bold rounded-xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(124,58,237,0.3)]"
+            className="px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white text-[10px] font-bold rounded-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(124,58,237,0.3)]"
           >
             Launch Chatbot
           </a>
@@ -96,18 +108,32 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/privacy"
+                to="/about"
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-bold"
               >
-                Privacy Policy
+                About
               </Link>
               <Link
-                to="/terms"
+                to="/partners"
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-bold"
               >
-                Terms of Service
+                Partners
+              </Link>
+              <Link
+                to="/whatsapp-services"
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold"
+              >
+                WhatsApp Services
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold"
+              >
+                Contact
               </Link>
               <a
                 href="https://wa.me/918999470824"
@@ -127,18 +153,43 @@ const Footer = () => (
   <footer className="bg-black border-t border-white/10 py-20 px-6">
     <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
       <img src="/sahaj.png" alt="Odisha Emblem" className="h-24 w-auto mb-8" />
-      <p className="text-violet-400/80 text-sm font-bold mb-4">
-        Developed and maintained by{" "}
-        <strong className="text-white">PugArch Technology Pvt Ltd</strong>
-        <br />
-        for the{" "}
-        <span className="text-white">
-          District Administration of Jharsuguda.
-        </span>
+      <p className="text-violet-400/80 text-sm font-bold mb-4 uppercase tracking-widest">
+        Sahaj Platform
       </p>
+      <p className="text-gray-400 text-sm mb-6 max-w-xl">
+        Sahaj is a digital citizen service platform developed and operated by{" "}
+        <strong className="text-white">PugArch Technologies Pvt Ltd</strong>.
+        Government departments may use the Sahaj platform to deliver citizen services through digital channels including WhatsApp.
+      </p>
+      <div className="mb-8">
+        <p className="text-violet-400/80 text-xs font-bold uppercase tracking-widest mb-2">
+          Current Implementation
+        </p>
+        <p className="text-white text-sm">
+          District Administration Jharsuguda, Government of Odisha
+        </p>
+      </div>
       <div className="flex gap-8 mb-8">
         <Link
-          to="/privacy"
+          to="/about"
+          className="text-xs text-gray-500 hover:text-white transition-colors"
+        >
+          About
+        </Link>
+        <Link
+          to="/partners"
+          className="text-xs text-gray-500 hover:text-white transition-colors"
+        >
+          Partners
+        </Link>
+        <Link
+          to="/contact"
+          className="text-xs text-gray-500 hover:text-white transition-colors"
+        >
+          Contact
+        </Link>
+        <Link
+          to="/privacy-policy"
           className="text-xs text-gray-500 hover:text-white transition-colors"
         >
           Privacy Policy
@@ -150,16 +201,16 @@ const Footer = () => (
           Terms of Service
         </Link>
         <a
-          href="https://jharsuguda.odisha.gov.in"
+          href="https://linkedin.com/company/pugarch"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-gray-500 hover:text-white transition-colors"
         >
-          Official Website
+          LinkedIn
         </a>
       </div>
       <p className="text-gray-600 text-[10px] tracking-[0.2em] uppercase">
-        &copy; 2026 Collectorate Jharsuguda. All rights reserved.
+        &copy; 2026 PugArch Technologies Pvt Ltd. All rights reserved.
       </p>
     </div>
   </footer>
@@ -189,23 +240,25 @@ const HomePage = () => {
           className="relative z-10 max-w-5xl text-center"
         >
           <div className="inline-block px-4 py-1.5 mb-8 text-[10px] font-black tracking-[0.3em] text-violet-400 uppercase border border-violet-500/30 rounded-full bg-violet-500/10 backdrop-blur-sm">
-            Official Citizen Service Helpdesk
+            Citizen Interaction Platform
           </div>
 
           <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
-            Sahaj – <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-violet-500">
-              Collectorate Jharsuguda
+            Sahaj
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-violet-500 text-4xl md:text-6xl">
+              WhatsApp Citizen Helpdesk Platform
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-           Sahaj is a digital citizen helpdesk platform developed by PugArch Technology Pvt Ltd for the District Administration of Jharsuguda.
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-6 font-medium leading-relaxed">
+            Sahaj is a digital citizen service platform developed by PugArch Technologies that enables government departments and organizations to deliver services through WhatsApp and web interfaces.
           </p>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-            
-            Citizens can contact the Sahaj WhatsApp helpdesk to receive district
-            services and support directly from Collectorate Jharsuguda.
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-6 font-medium leading-relaxed">
+            The platform allows citizens to register grievances, schedule appointments, access public information, and communicate with government offices through automated WhatsApp workflows.
+          </p>
+          <p className="text-lg md:text-xl text-violet-400/80 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
+            District Administration Jharsuguda is one of the government entities currently using the Sahaj platform to improve citizen service delivery.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -234,10 +287,10 @@ const HomePage = () => {
               <div className="w-14 h-14 bg-violet-600/20 rounded-2xl flex items-center justify-center text-violet-400 mb-8 border border-violet-500/20 group-hover:scale-110 transition-transform">
                 <Info size={28} />
               </div>
-              <h3 className="text-2xl font-black mb-4">Official Information</h3>
+              <h3 className="text-2xl font-black mb-4">Citizen Information</h3>
               <p className="text-gray-400 leading-relaxed">
                 Get verified information about district services, schemes, and
-                official department procedures directly on your mobile.
+                department procedures directly on your mobile.
               </p>
             </div>
 
@@ -247,8 +300,8 @@ const HomePage = () => {
               </div>
               <h3 className="text-2xl font-black mb-4">Grievance Portal</h3>
               <p className="text-gray-400 leading-relaxed">
-                A seamless way to submit and track grievances. Our system
-                ensures your concerns reach the right officials promptly.
+                Connect with automated assistance to find information about 
+                district services, schemes, and procedures through the platform.
               </p>
             </div>
 
@@ -258,8 +311,8 @@ const HomePage = () => {
               </div>
               <h3 className="text-2xl font-black mb-4">Meta Verified</h3>
               <p className="text-gray-400 leading-relaxed">
-                An official, verified channel for communication. This platform
-                acts as a secure digital bridge for the residents of Jharsuguda.
+                A secure, verified channel for communication. This platform
+                acts as a digital bridge for the residents of Jharsuguda.
               </p>
             </div>
           </div>
@@ -271,25 +324,19 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
             <span className="text-[10px] font-black tracking-widest text-violet-400 uppercase">
-              Administration
+              Current Deployment
             </span>
-            <h2 className="text-4xl md:text-5xl font-black mt-4 mb-8">
-              Collectorate <br />
-              Jharsuguda
+            <h2 className="text-4xl md:text-5xl font-black mt-4 mb-4 text-white">
+              Collectorate Jharsuguda
             </h2>
-            <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-              The Office of the District Magistrate and Collector is the primary
-              administrative unit of the district, coordinating development and
-              governance for the citizens of Jharsuguda.
+            <p className="text-violet-400 text-sm font-bold uppercase tracking-widest mb-8">
+              District Administration of Jharsuguda, Odisha
             </p>
             <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-          Sahaj is a citizen helpdesk chatbot platform developed by
-PugArch Technology Pvt Ltd to assist organizations and
-public service providers in communicating with citizens.
-            </p> 
-             <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-This platform is currently deployed to assist citizens
-interacting with district administration services in Jharsuguda.            </p>
+              The Sahaj platform is currently used to assist citizens interacting 
+              with district administration services in Jharsuguda. The Collectorate 
+              Jharsuguda uses this technology to bring governance closer to people.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
@@ -317,7 +364,7 @@ interacting with district administration services in Jharsuguda.            </p>
                   </a>
                 </p>
                 <br></br>
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Official WhatsApp Helpdesk Number</span>
+                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">WhatsApp Helpdesk Number</span>
                 <p className="text-white font-medium">8999470824</p>
               </div>
             </div>
@@ -336,6 +383,246 @@ interacting with district administration services in Jharsuguda.            </p>
   );
 };
 
+const AboutPage = () => (
+  <div className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-4xl md:text-6xl font-black mb-12"
+    >
+      About Sahaj
+    </motion.h1>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+        <p>
+          <strong className="text-white text-xl block mb-2">Defining Modern Governance</strong>
+          Sahaj is a digital governance platform developed by PugArch Technologies to simplify citizen service delivery through messaging platforms like WhatsApp.
+        </p>
+        <p>
+          Our mission is to help government departments and organizations automate citizen services such as grievance management, appointment booking, and service information dissemination.
+        </p>
+        <p>
+          By integrating with the WhatsApp Business API, Sahaj enables secure and structured communication between citizens and government offices, ensuring that every query is tracked and resolved efficiently.
+        </p>
+        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 mt-8">
+          <p className="text-violet-400 font-bold mb-2 uppercase tracking-widest text-xs">Current Use Case</p>
+          <p className="text-white">
+            The platform is currently being used by District Administration Jharsuguda, Government of Odisha, to provide citizen services digitally to the residents of the district.
+          </p>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div className="text-3xl font-black text-white mb-2">Automated</div>
+          <div className="text-xs text-gray-500 uppercase tracking-widest">Workflows</div>
+        </div>
+        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div className="text-3xl font-black text-white mb-2">Secure</div>
+          <div className="text-xs text-gray-500 uppercase tracking-widest">Information</div>
+        </div>
+        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div className="text-3xl font-black text-white mb-2">Scalable</div>
+          <div className="text-xs text-gray-500 uppercase tracking-widest">Platform</div>
+        </div>
+        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div className="text-3xl font-black text-white mb-2">Real-time</div>
+          <div className="text-xs text-gray-500 uppercase tracking-widest">Resolution</div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const PartnersPage = () => (
+  <div className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+    <div className="text-center mb-20">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-4xl md:text-6xl font-black mb-6"
+      >
+        Government Partners
+      </motion.h1>
+      <p className="text-gray-400 text-xl max-w-2xl mx-auto">
+        Sahaj works with government departments to enable digital service delivery through messaging platforms.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 p-8">
+          <ExternalLink className="text-gray-600 group-hover:text-violet-400 transition-colors" />
+        </div>
+        <span className="text-[10px] font-black tracking-widest text-violet-400 uppercase">Featured Deployment</span>
+        <h2 className="text-3xl font-black text-white mt-4 mb-2">District Administration Jharsuguda</h2>
+        <p className="text-gray-500 mb-8 font-bold">Government of Odisha, India</p>
+        
+        <div className="space-y-4">
+          <p className="text-white font-bold opacity-80 uppercase tracking-widest text-xs">Services Enabled:</p>
+          <ul className="space-y-3">
+            {[
+              "Citizen grievance registration",
+              "Appointment scheduling",
+              "Public information services",
+              "WhatsApp based citizen communication"
+            ].map((service, i) => (
+              <li key={i} className="flex items-center gap-3 text-gray-400">
+                <ChevronRight size={16} className="text-violet-500" />
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <a 
+          href="https://jharsuguda.odisha.gov.in" 
+          target="_blank" 
+          className="inline-block mt-10 px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all"
+        >
+          Visit Official Portal
+        </a>
+      </div>
+
+      <div className="p-10 rounded-[40px] bg-gradient-to-br from-violet-600/20 to-transparent border border-white/10 flex flex-col items-center justify-center text-center">
+        <h3 className="text-2xl font-black text-white mb-4">Partner With Us</h3>
+        <p className="text-gray-400 mb-8">
+          Are you a government organization looking to modernize your citizen service delivery?
+        </p>
+        <Link to="/contact" className="px-10 py-5 bg-violet-600 text-white font-black rounded-2xl hover:scale-105 transition-all shadow-lg shadow-violet-600/20">
+          Become a Partner
+        </Link>
+      </div>
+    </div>
+  </div>
+);
+
+const WhatsAppServicesPage = () => (
+  <div className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+    <div className="flex flex-col lg:flex-row gap-20 items-center mb-20">
+      <div className="flex-1">
+        <motion.h1
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="text-4xl md:text-6xl font-black mb-8 leading-tight"
+        >
+          WhatsApp <br />
+          <span className="text-violet-400">Services</span>
+        </motion.h1>
+        <p className="text-xl text-gray-400 leading-relaxed mb-8">
+          Sahaj integrates with the official WhatsApp Business API to enable secure communication between citizens and government departments.
+        </p>
+        <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20">
+          <div className="w-12 h-12 bg-[#25D366] rounded-xl flex items-center justify-center text-white">
+            <Shield size={24} />
+          </div>
+          <p className="text-sm text-[#25D366] font-bold">Official Business API Integration</p>
+        </div>
+      </div>
+      <div className="flex-1 grid grid-cols-1 gap-4">
+        {[
+          { icon: <MessageSquare />, title: "Register Grievances", desc: "Submit complaints directly through chat with image and document support." },
+          { icon: <ExternalLink />, title: "Book Appointments", desc: "Schedule meetings with officials without visiting the office personally." },
+          { icon: <Info />, title: "Service Updates", desc: "Receive real-time notifications about your application status." },
+          { icon: <Phone />, title: "Government Info", desc: "Access verified department details and procedure information 24/7." }
+        ].map((item, i) => (
+          <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 flex gap-6 hover:border-violet-500/30 transition-colors">
+            <div className="text-violet-400 mt-1">{item.icon}</div>
+            <div>
+              <h3 className="text-white font-bold mb-1">{item.title}</h3>
+              <p className="text-sm text-gray-400">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="p-12 rounded-[40px] bg-white/5 border border-white/10 text-center">
+      <h2 className="text-2xl font-black text-white mb-6">Security & Verification</h2>
+      <p className="text-gray-400 max-w-3xl mx-auto mb-0 leading-relaxed">
+        All communication is conducted through verified WhatsApp Business accounts. Data is encrypted end-to-end between the citizen and the Sahaj platform, ensuring that sensitive information remains confidential and secure.
+      </p>
+    </div>
+  </div>
+);
+
+const ContactPage = () => (
+  <div className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+    <div className="text-center mb-16">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-4xl md:text-6xl font-black mb-6"
+      >
+        Contact Us
+      </motion.h1>
+      <p className="text-xl text-gray-400">Get in touch with the team at PugArch Technologies.</p>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="lg:col-span-1 space-y-8">
+        <div className="p-10 rounded-[3rem] bg-white/5 border border-white/10">
+          <h3 className="text-xl font-bold text-white mb-6">Our Details</h3>
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="w-10 h-10 bg-violet-600/20 rounded-lg flex items-center justify-center text-violet-400 shrink-0">
+                <Mail size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-1">Email</p>
+                <a href="mailto:info@pugarch.in" className="text-white hover:text-violet-400 transition-colors">info@pugarch.in</a>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="w-10 h-10 bg-violet-600/20 rounded-lg flex items-center justify-center text-violet-400 shrink-0">
+                <Phone size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-1">Phone</p>
+                <p className="text-white">+91 8180006916</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="w-10 h-10 bg-violet-600/20 rounded-lg flex items-center justify-center text-violet-400 shrink-0">
+                <Info size={18} />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-1">Office Address</p>
+                <p className="text-white leading-relaxed">
+                  PugArch Technologies Pvt Ltd<br />
+                  L-18 LIG Mahada Colony,<br />Laxman Nagar, Manewada,<br />Nagpur, Maharashtra
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:col-span-2 p-10 rounded-[3.5rem] bg-gradient-to-br from-white/10 to-transparent border border-white/10">
+        <h3 className="text-2xl font-black text-white mb-8">Inquiry Form</h3>
+        <form className="grid grid-cols-1 sm:grid-cols-2 gap-6" onSubmit={(e) => e.preventDefault()}>
+          <div className="space-y-2">
+            <label className="text-xs text-gray-500 font-bold uppercase tracking-widest ml-1">Name</label>
+            <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-violet-500 transition-colors" placeholder="Your name" />
+          </div>
+          <div className="space-y-2">
+            <label className="text-xs text-gray-500 font-bold uppercase tracking-widest ml-1">Email</label>
+            <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-violet-500 transition-colors" placeholder="Your email" />
+          </div>
+          <div className="sm:col-span-2 space-y-2">
+            <label className="text-xs text-gray-500 font-bold uppercase tracking-widest ml-1">Subject</label>
+            <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-violet-500 transition-colors" placeholder="How can we help?" />
+          </div>
+          <div className="sm:col-span-2 space-y-2">
+            <label className="text-xs text-gray-500 font-bold uppercase tracking-widest ml-1">Message</label>
+            <textarea className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-violet-500 transition-colors min-h-[150px]" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <button className="sm:col-span-2 py-5 bg-violet-600 hover:bg-violet-700 text-white font-black rounded-2xl transition-all hover:scale-[1.02] shadow-xl shadow-violet-600/20 mt-4">
+            Send Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+);
+
 const PrivacyPage = () => (
   <div className="pt-32 pb-24 px-6 max-w-4xl mx-auto">
     <motion.h1
@@ -348,17 +635,21 @@ const PrivacyPage = () => (
     <div className="space-y-12 text-gray-400 leading-relaxed text-lg">
       <section>
         <p className="text-white font-medium mb-6 italic">
-          Last Updated: March 4, 2026
+          Last Updated: March 6, 2026
+        </p>
+        <p className="mb-4">
+          Sahaj respects user privacy and processes citizen data strictly for the purpose of providing government services through the platform.
+        </p>
+        <p className="mb-4">
+          Sahaj is a technology platform developed and maintained by <strong className="text-white">PugArch Technologies Pvt Ltd</strong>.
         </p>
         <p>
-          This Privacy Policy describes how{" "}
-          <strong className="text-white">
-            Sahaj – Collectorate Jharsuguda WhatsApp Helpdesk
-          </strong>{" "}
-          handles your information. Sahaj is the official digital service
-          platform for citizen services of Collectorate Jharsuguda, developed
-          and maintained by{" "}
-          <strong className="text-white">PugArch Technology Pvt Ltd</strong>.
+          Data shared through WhatsApp or web interfaces is used only for service delivery and is not shared with third parties without authorization. The platform complies with applicable data protection regulations.
+        </p>
+        <p className="mt-4">
+          Currently, Sahaj is deployed for use by the{" "}
+          <strong className="text-white">Collectorate Jharsuguda</strong> to 
+          assist citizens with district administration services.
         </p>
       </section>
 
@@ -428,20 +719,24 @@ const TermsPage = () => (
     </motion.h1>
     <div className="space-y-12 text-gray-400 leading-relaxed text-lg">
       <section>
+        <p className="mb-8">
+          Sahaj is a digital service platform operated by <strong className="text-white">PugArch Technologies Pvt Ltd</strong>. Government departments may use the platform to provide citizen services through WhatsApp and other digital channels. Users interacting with government services through Sahaj agree to the terms outlined in this document.
+        </p>
         <h2 className="text-2xl font-bold text-white mb-6">
           1. Acceptance of Terms
         </h2>
         <p>
-          By using the Sahaj WhatsApp Helpdesk, you agree to comply with the
-          official guidelines set by the Collectorate Jharsuguda District
-          Administration.
+          By using the Sahaj WhatsApp Helpdesk platform, you agree to these 
+          terms. When interacting with specific services deployed for 
+          organizations like the Collectorate Jharsuguda, you also agree to 
+          comply with their official guidelines.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold text-white mb-6">2. Permitted Use</h2>
         <p>
-          This service is strictly for official citizen inquiries and grievance
+          This service is for citizen inquiries and grievance
           submissions. Misuse of the chatbot for spam, harassment, or spreading
           misinformation is prohibited.
         </p>
@@ -451,7 +746,7 @@ const TermsPage = () => (
         <h2 className="text-2xl font-bold text-white mb-6">3. Disclaimer</h2>
         <p>
           While we strive for 24/7 availability, service may be suspended for
-          maintenance. Information provided is as per official district records.
+          maintenance. Information provided is as per available district records.
         </p>
       </section>
     </div>
@@ -473,8 +768,13 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/whatsapp-services" element={<WhatsAppServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
       </AnimatePresence>
       <Footer />
